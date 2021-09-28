@@ -4,7 +4,7 @@
 
 Dengan judul Competition “Titanic - Machine Learning from Disaster”, dataset ini merupakan salah satu dataset yang paling terkenal di kalangan komunitas data scientists. Dataset ini umumnya dipakai oleh data scientists pemula dalam pembelajaran mereka. Dengan dataset ini, data scientists dapat dengan leluasa meniliti dikarenakan dataset ini memiliki data yang beragam dan ramah untuk pemula.
 
-Berdasarkan Wikipedia (https://en.wikipedia.org/wiki/Titanic), RMS Titanic pada masa lampau adalah kapal penumpang yang dioperasikan oleh White Star Line yang tenggelam di laut Atlantik utara pada tanggal 15 April 1912, dikarenakan oleh tabrakan RMS Titanic dengan gunung es pada saat berlayar dari Southampton ke kota New York. 
+Berdasarkan Wikipedia [tautan](https://en.wikipedia.org/wiki/Titanic), RMS Titanic pada masa lampau adalah kapal penumpang yang dioperasikan oleh White Star Line yang tenggelam di laut Atlantik utara pada tanggal 15 April 1912, dikarenakan oleh tabrakan RMS Titanic dengan gunung es pada saat berlayar dari Southampton ke kota New York. 
 
 RMS Titanic membawa 2224 penumpang dan awak kapal dengan 1500 orang meninggal dunia. Dengan banyaknya orang yang meninggal dunia dari tabrakan RMS Titanic ini, public banyak mengenang tragedi ini lewat film, lagu, dan lukisan.
 
@@ -65,6 +65,7 @@ Terlihat dari heatmap pada notebook, Cabin memiliki NaN values yang sangat banya
 -	Univariate analysis
  
 	Ada 5 barplot yang saya bawakan di notebook. 
+	![Barplot Pertama](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/1.JPG)
 Pada barplot pertama yang ada pada notebook, kita dapat menyimpulkan bahwa lebih banyak penumpang yang meninggal,.
 	Kita juga dapat menyimpulkan bahwa lebih banyak penumpang membeli tiket kelas ketiga, sehingga kita dapat berasumsi bahwa banyak penumpang yang tidak kaya atau tiket dengan kelas kedua dan pertama sudah habis pada barplot kedua.
 	Pada barplot ketiga, kita dapat menyimpulkan bahwa lebih banyak penumpang berjenis kelamin laki – laki.
