@@ -133,6 +133,7 @@ Berikut adalah tabel evaluasi dari keempat model:
 
 ![Evaluasi](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/7.JPG)
 
+Berikut XGBRegressor memiliki Accuracy, Precision, Recall, dan F1 Score terbaik dari 3 model lainnya, membuatnya menjadi model terbaik dari keempat model yang saya pakai.
 ## Evaluasi
 
 Sebelum ke metrik evaluasi, terlebih dahulu kita harus mengerti tentang confusion matrix.
