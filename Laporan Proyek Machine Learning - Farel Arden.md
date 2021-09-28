@@ -65,24 +65,34 @@ Terlihat dari heatmap pada notebook, Cabin memiliki NaN values yang sangat banya
 -	Univariate analysis
  
 	Ada 5 barplot yang saya bawakan di notebook. 
--
+-   Barplot Pertama
 	![Barplot Pertama](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/1.JPG)
 
     Pada barplot pertama yang ada pada notebook, kita dapat menyimpulkan bahwa lebih banyak penumpang yang meninggal.
 
-- ![Barplot kedua](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/2.JPG)
- Kita juga dapat menyimpulkan bahwa lebih banyak penumpang membeli tiket kelas ketiga, sehingga kita dapat berasumsi bahwa banyak penumpang yang tidak kaya atau tiket dengan kelas kedua dan pertama sudah habis pada barplot kedua.
-- ![Barplot Ketiga](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/3.JPG)
-Pada barplot ketiga, kita dapat menyimpulkan bahwa lebih banyak penumpang berjenis kelamin laki – laki.
-- ![Barplot Keempat](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/4.JPG)
- Kita pula dapat menyimpulkan bahwa banyak sekali nomor tiket yang dimiliki oleh penumpang – penumpang Titanic, oleh karena itu saya memilih untuk drop kolom Ticket pada saat training nanti pada barplot keempat.
-- ![Barplot Kelima](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/5.JPG)
- Dan terakhir, kita dapat menyimpulkan bahwa penumpang paling banyak berasal dari kota Southampton diikuti dengan kota Cherbourg dan kota Queenstown.
+-  Barplot Kedua
+  ![Barplot kedua](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/2.JPG)
+
+     Kita juga dapat menyimpulkan bahwa lebih banyak penumpang membeli tiket kelas ketiga, sehingga kita dapat berasumsi bahwa banyak penumpang yang tidak kaya atau tiket dengan kelas kedua dan pertama sudah habis pada barplot kedua.
+-  Barplot Ketiga
+  ![Barplot Ketiga](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/3.JPG)
+
+    Pada barplot ketiga, kita dapat menyimpulkan bahwa lebih banyak penumpang berjenis kelamin laki – laki.
+- Barplot Keempat 
+  ![Barplot Keempat](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/4.JPG)
+
+     Kita pula dapat menyimpulkan bahwa banyak sekali nomor tiket yang dimiliki oleh penumpang – penumpang Titanic, oleh karena itu saya memilih untuk drop kolom Ticket pada saat training nanti pada barplot keempat.
+-  Barplot Kelima
+  ![Barplot Kelima](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/5.JPG)
+
+     Dan terakhir, kita dapat menyimpulkan bahwa penumpang paling banyak berasal dari kota Southampton diikuti dengan kota Cherbourg dan kota Queenstown.
 
 
 -	Multivariate Analysis
- ![Heatmap](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/6.JPG)
-	Dari heatmap pada notebook, kita dapat melihat beberapa fitur yang tidak berkorelasi seperti fitur ‘Parch’ bahkan berkorelasi negative seperti fitur ‘Pclass’ (-0.24). Oleh karena itu kedua fitur tersebut saya drop.
+ 
+![Heatmap](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/6.JPG)
+
+    Dari heatmap pada notebook, kita dapat melihat beberapa fitur yang tidak berkorelasi seperti fitur ‘Parch’ bahkan berkorelasi negative seperti fitur ‘Pclass’ (-0.24). Oleh karena itu kedua fitur tersebut saya drop.
 
 ## Data Preparation
 
@@ -112,6 +122,9 @@ Pada akhirnya, kita pun juga berdebat, gradient boosting algorithm mana yang pal
 Ada pula fungsi threshold yang memiliki tujuan untuk mengubah value dari hasi regresi yang lebih dari 0.55 menjadi 1 dan 0 bila dibawah 0.55.
 Dari 4 model machine learning tersebut, dibuktikan bahwa XGBRegressor memiliki tingkat akurasi yang paling tinggi dengan bantuan beberapa parameter.
 
+Berikut adalah tabel evaluasi dari keempat model:
+![Evaluasi](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/7.JPG)
+
 ## Evaluasi
 
 Sebelum ke metrik evaluasi, terlebih dahulu kita harus mengerti tentang confusion matrix.
@@ -132,5 +145,7 @@ Saya menggunakan 4 metrik evaluasi dalam projek ini. 4 metrik evaluasi tersebut 
 -	**F1**: Metrik yang menimbang kemampuan model untuk memberikan Precision dan Recall.
 	Rumus F1 Score = 2* Precision Score * Recall Score/ (Precision Score + Recall Score/)
 
+Berikut adalah tabel evaluasi dari keempat model:
+![Evaluasi](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/7.JPG)
  
 
