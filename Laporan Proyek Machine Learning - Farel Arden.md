@@ -65,16 +65,23 @@ Terlihat dari heatmap pada notebook, Cabin memiliki NaN values yang sangat banya
 -	Univariate analysis
  
 	Ada 5 barplot yang saya bawakan di notebook. 
+-
 	![Barplot Pertama](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/1.JPG)
-Pada barplot pertama yang ada pada notebook, kita dapat menyimpulkan bahwa lebih banyak penumpang yang meninggal,.
-	Kita juga dapat menyimpulkan bahwa lebih banyak penumpang membeli tiket kelas ketiga, sehingga kita dapat berasumsi bahwa banyak penumpang yang tidak kaya atau tiket dengan kelas kedua dan pertama sudah habis pada barplot kedua.
-	Pada barplot ketiga, kita dapat menyimpulkan bahwa lebih banyak penumpang berjenis kelamin laki – laki.
- 	Kita pula dapat menyimpulkan bahwa banyak sekali nomor tiket yang dimiliki oleh penumpang – penumpang Titanic, oleh karena itu saya memilih untuk drop kolom Ticket pada saat training nanti pada barplot keempat.
- 	Dan terakhir, kita dapat menyimpulkan bahwa penumpang paling banyak berasal dari kota Southampton diikuti dengan kota Cherbourg dan kota Queenstown.
+
+    Pada barplot pertama yang ada pada notebook, kita dapat menyimpulkan bahwa lebih banyak penumpang yang meninggal.
+
+- ![Barplot kedua](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/2.JPG)
+ Kita juga dapat menyimpulkan bahwa lebih banyak penumpang membeli tiket kelas ketiga, sehingga kita dapat berasumsi bahwa banyak penumpang yang tidak kaya atau tiket dengan kelas kedua dan pertama sudah habis pada barplot kedua.
+- ![Barplot Ketiga](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/3.JPG)
+Pada barplot ketiga, kita dapat menyimpulkan bahwa lebih banyak penumpang berjenis kelamin laki – laki.
+- ![Barplot Keempat](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/4.JPG)
+ Kita pula dapat menyimpulkan bahwa banyak sekali nomor tiket yang dimiliki oleh penumpang – penumpang Titanic, oleh karena itu saya memilih untuk drop kolom Ticket pada saat training nanti pada barplot keempat.
+- ![Barplot Kelima](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/5.JPG)
+ Dan terakhir, kita dapat menyimpulkan bahwa penumpang paling banyak berasal dari kota Southampton diikuti dengan kota Cherbourg dan kota Queenstown.
 
 
 -	Multivariate Analysis
- 
+ ![Heatmap](https://github.com/alphaprime27/Proyek-Dicoding-Titanic/blob/main/6.JPG)
 	Dari heatmap pada notebook, kita dapat melihat beberapa fitur yang tidak berkorelasi seperti fitur ‘Parch’ bahkan berkorelasi negative seperti fitur ‘Pclass’ (-0.24). Oleh karena itu kedua fitur tersebut saya drop.
 
 ## Data Preparation
