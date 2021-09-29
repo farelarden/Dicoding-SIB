@@ -38,4 +38,37 @@ Sistem rekomendasi tidak dapat merekomendasikan item - item secara objektif, kar
 
 Dataset ini memiliki 18 variabel. Berikut adalah penjelasan mengenai variabel - variabel tersebut:
 
-- 
+- **genre** (Datatype: string): 
+ Daftar genre yang dikaitkan dengan artis
+- **artist_name** (Datatype: string): 
+ Nama artis
+- **track_name** (Datatype: string): 
+ Judul lagu
+- **track_id** (Datatype: string): 
+ ID lagu
+- **popularity** (Datatype:int ): 
+ Popularitas lagu. Nilainya antara 0 dan 100, dengan 100 menjadi yang paling populer.
+- **acousticness** (Datatype: float): 
+ Memiliki ukuran kepercayaan dari 0,0 hingga 1,0 apakah trek tersebut tergolong akustik. 1.0 mewakili keyakinan tinggi bahwa trek tersebut tergolong akustik.
+- **danceability** (Datatype: float): 
+ Danceability menggambarkan seberapa cocok trek untuk menari berdasarkan kombinasi elemen musik termasuk tempo, stabilitas ritme, kekuatan ketukan, dan keteraturan keseluruhan. Nilai 0,0 paling tidak dapat menari dan 1,0 paling dapat menari.
+- **duration_ms** (Datatype: int): 
+ Durasi trek dalam milidetik.
+- **energy** (Datatype: float): 
+ Energi adalah ukuran dari 0,0 hingga 1,0 dan mewakili ukuran persepsi intensitas dan aktivitas. Biasanya, trek energik terasa cepat, keras, dan berisik memiliki nilai 1,0
+- **instrumentalness** (Datatype: float): 
+ Memprediksi apakah trek tidak berisi vokal. Rap atau trek kata yang diucapkan jelas “vokal”. Semakin dekat nilai instrumental menjadi 1,0, semakin besar kemungkinan trek tersebut tidak berisi konten vokal.
+- **key** (Datatype: int): 
+Kunci trek tersebut. Integer memetakan ke pitch menggunakan notasi Kelas Pitch standar. Misalnya. 0 = C, 1 = C♯/D, 2 = D, dan seterusnya.
+- **liveness** (Datatype:float ): Mendeteksi kehadiran penonton dalam rekaman. Nilai keaktifan yang lebih tinggi menunjukkan peningkatan kemungkinan bahwa trek ditampilkan secara langsung. Nilai di atas 0,8 memberikan kemungkinan yang kuat bahwa trek itu hidup.
+- **loudness** (Datatype: float): 
+ Kenyaringan keseluruhan trek dalam desibel (dB). Nilai kenyaringan dirata-ratakan di seluruh trek dan berguna untuk membandingkan kenyaringan relatif trek. Kenyaringan adalah kualitas suara yang merupakan korelasi psikologis utama dari kekuatan fisik (amplitudo). Nilai tipikal berkisar antara -60 dan 0 db.
+- **mode** (Datatype: int): 
+ Mode menunjukkan modalitas (mayor atau minor) dari sebuah trek, jenis tangga nada dari mana konten melodinya berasal. Mayor diwakili oleh 1 dan minor adalah 0.
+- **speechiness** (Datatype: float): 
+ Speechiness mendeteksi keberadaan kata-kata yang diucapkan di trek. Semakin eksklusif rekaman seperti pidato (misalnya acara bincang-bincang, buku audio, puisi), semakin mendekati 1,0 nilai atributnya.
+- **tempo** (Datatype: float): 
+ Perkiraan tempo keseluruhan trek dalam ketukan per menit (BPM).
+- **time_signature** (Datatype: int): 
+ Perkiraan tanda waktu keseluruhan trek
+
