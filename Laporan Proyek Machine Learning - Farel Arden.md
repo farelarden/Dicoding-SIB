@@ -8,27 +8,22 @@ Berdasarkan Wikipedia [tautan](https://en.wikipedia.org/wiki/Titanic), RMS Titan
 
 RMS Titanic membawa 2224 penumpang dan awak kapal dengan 1500 orang meninggal dunia. Dengan banyaknya orang yang meninggal dunia dari tabrakan RMS Titanic ini, public banyak mengenang tragedi ini lewat film, lagu, dan lukisan.
 
-RMS Titanic adalah kapal terbesar ketika ia berlayar dan dinahkodai oleh Captain Edward Smith yang seperti seorang nahkoda pada umumnya, ia meninggal bersama dengan kapalnya.
-Di dalam dataset ini, model diminta untuk memprediksi penumpang seperti apakah yang memiliki kemungkinan terbesar untuk selamat? 
+Di dalam dataset ini, model diminta untuk memprediksi penumpang lainnya apakah selamat atau tidak berdasarkan data train. Data train dan data test keduanya merupakan penumpang RMS Titanic.
+Kita akan menyelesaikan masalah ini dengan model Klasifikasi dan Regresi. Hasil dari model regresi ini akan diberikan fungsi untuk mengubah hasil dari prediksi dari float menjadi biner.
 
 ## Business Understanding
 
 ### Problem Statement:
--	Fitur – fitur mana saja yang paling berpengaruh terhadap keselamatan penumpang RMS Titanic?
--	Penumpang dengan detail seperti apa yang membuat nya memiliki kemungkinan terbesar untuk selamat dalam tabrakan RMS Titanic dengan gunung es?
+- Apakah penumpang - penumpang kapal RMS Titanic selamat atau tidak?
 
 ### Goals:
--	Mengetahui fitur – fitur yang paling berpengaruh terhadap keselamatan penumpang RMS Titanic.
--	Membuat model machine learning yang dapat mengetahui kemungkinan terbesar penumpang – penumpang yang selamat lewat data yang diberikan.
+-	Memprediksi Keselamatan penumpang - penumpang yang ada di kapal RMS Titanic 
 
 ### Solution Statements:
 -	Menggunakan EDA untuk melihat fitur – fitur yang berkorelasi dan berpengaruh terhadap keselamatan penumpang RMS Titanic.
--	Menggunakan berbagai model machine learning untuk mengetahui kemungkinan terbesar penumpang – penumpang yang selamat lewat data yang diberikan. Kemudian kita akan memilih model mana yang memiliki tingkat akurasi paling tinggi, model – model yang akan dibuat adalah:
-	1.	XGBRegressor
+-	Menggunakan berbagai model machine learning untuk mengetahui kemungkinan terbesar penumpang – penumpang yang selamat lewat data yang diberikan. Model - model yang akan dipakai adalah model - model machine learning klasifikasi. Kemudian kita akan memilih model mana yang memiliki tingkat akurasi paling tinggi, model – model yang akan dibuat adalah:
+	1.	Logistic Regressor
 	2.	XGBClassifier
-	3.	CatBoost
-	4.	LGBMRegressor
-Untuk model – model regresi, saya menggunakan sebuah function di mana apabila hasil regresi melebihi nilai 0.55 maka akan dijadikan 1 atau Survived, dan 0 atau Not Survived bila tidak.
 
 ## Data Understanding
 
@@ -67,37 +62,37 @@ Terlihat dari heatmap pada notebook, Cabin memiliki NaN values yang sangat banya
 	Ada 5 barplot yang saya bawakan di notebook. 
 -   Barplot Pertama
    
-![Barplot Pertama](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/1.JPG)
+![Barplot Pertama](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/1.JPG))
 
 Pada barplot pertama yang ada pada notebook, kita dapat menyimpulkan bahwa lebih banyak penumpang yang meninggal.
 
 -  Barplot Kedua
 
-![Barplot kedua](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/2.JPG)
+![Barplot kedua](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/2.JPG))
 
 Kita juga dapat menyimpulkan bahwa lebih banyak penumpang membeli tiket kelas ketiga, sehingga kita dapat berasumsi bahwa banyak penumpang yang tidak kaya atau tiket dengan kelas kedua dan pertama sudah habis pada barplot kedua.
 
 -  Barplot Ketiga
   
-![Barplot Ketiga](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/3.JPG)
+![Barplot Ketiga](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/3.JPG))
 
 Pada barplot ketiga, kita dapat menyimpulkan bahwa lebih banyak penumpang berjenis kelamin laki – laki.
 - Barplot Keempat
  
-![Barplot Keempat](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/4.JPG)
+![Barplot Keempat](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/4.JPG))
 
 Kita pula dapat menyimpulkan bahwa banyak sekali nomor tiket yang dimiliki oleh penumpang – penumpang Titanic, oleh karena itu saya memilih untuk drop kolom Ticket pada saat training nanti pada barplot keempat.
 
 -  Barplot Kelima
   
-![Barplot Kelima](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/5.JPG)
+![Barplot Kelima](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/5.JPG))
 
 Dan terakhir, kita dapat menyimpulkan bahwa penumpang paling banyak berasal dari kota Southampton diikuti dengan kota Cherbourg dan kota Queenstown.
 
 
 -	Multivariate Analysis
  
-![Heatmap](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/6.JPG)
+![Heatmap](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/6.JPG))
 
 Dari heatmap pada notebook, kita dapat melihat beberapa fitur yang tidak berkorelasi seperti fitur ‘Parch’ bahkan berkorelasi negative seperti fitur ‘Pclass’ (-0.24). Oleh karena itu kedua fitur tersebut saya drop.
 
@@ -115,23 +110,15 @@ Dalam data preparation saya melakukan 3 hal sebelum memasukkan data ke model lat
 ## Modeling
 
 Model – model yang saya pakai dalam projek ini adalah:
-1.	**XGBRegressor**
-    Merupakan salah satu dari gradient boosting algorithm yang sangat efisien dan fleksibel. XGBRegressor juga memiliki parallel tree boosting. Gradient Boosting algorithm pada dasarnya optimal karena kesalahan diminimalkan dengan menggunakan algoritma penurunan gradien(Berbeda dengan loss function pada umumnya).
+1.	**Logistic Regression**
+    Logistic Regression adalah sebuah algoritma klasifikasi di mana algoritma ini mencari hubungan antar fitur diskrit/kontinu dengan probabilitias hasi loutput diskrit tertentu.
 2.	**XGBClassifier**
-    Model ini hampir sama dengan XGBRegressor hanya saja XGBClassifier menggunakan pohon klasifikasi.
-3.	**CatBoost**
-    CatBoost Gradient Boosting Algorithm merupakan salah satu Gradient Boosting Algorithm yang menarik, karena kita dapat mendapatkan hasil dengan presisi yang baik hanya dengan menggunakan default parameter. Diciptakan oleh ilmuwan Yanex, CatBoost digunakan oleh perusahaan tersebut untuk menyelesaikan berbagai macam masalah, dimulai dari memprediksi cuaca hingga self-driven cars. 
-4.	**LGBMRegressor**
-    LGBMRegressor pun memiliki karakteristik yang mirip dengan ketiga algorithm di atas. LGBMRegressor merupakan salah satu gradient boosting algorithm yang cepat dan tidak memakan banyak memori. Yang menarik dari LGBMRegressor adalah ia pula dapat menghasilkan prediksi dengan akurasi yang lebih cepat namun tidak sebaik CatBoost algorithm.
+   Merupakan salah satu dari gradient boosting algorithm yang sangat efisien dan fleksibel. XGBClassifier juga memiliki parallel tree boosting. Gradient Boosting algorithm pada dasarnya optimal karena kesalahan diminimalkan dengan menggunakan algoritma penurunan gradien(Berbeda dengan loss function pada umumnya). XGBClassifier ini digunakan untuk masalah klasifikasi.
 
-Pada akhirnya, kita pun juga berdebat, gradient boosting algorithm mana yang paling baik? Jawabannya terletak pada eksperimen yang kita lakukan terhadap algoritma tersebut.
-
-Ada pula fungsi threshold yang memiliki tujuan untuk mengubah value dari hasi regresi yang lebih dari 0.55 menjadi 1 dan 0 bila dibawah 0.55.
-Dari 4 model machine learning tersebut, dibuktikan bahwa XGBRegressor memiliki tingkat akurasi yang paling tinggi dengan bantuan beberapa parameter.
 
 Berikut adalah tabel evaluasi dari keempat model:
 
-![Evaluasi](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/7.JPG)
+![Evaluasi](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/14.JPG))
 
 Berikut XGBRegressor memiliki Accuracy, Precision, Recall, dan F1 Score terbaik dari 3 model lainnya, membuatnya menjadi model terbaik dari keempat model yang saya pakai.
 ## Evaluasi
@@ -156,6 +143,6 @@ Saya menggunakan 4 metrik evaluasi dalam projek ini. 4 metrik evaluasi tersebut 
 
 Berikut adalah tabel evaluasi dari keempat model:
 
-![Evaluasi](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/7.JPG)
+![Evaluasi](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/14.JPG))
  
 
