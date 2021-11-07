@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Cafe A",
+        "lokasi": "Jalan Industri Raya",
+        "rating": 4,
+        "Favorit": "Kopi Arabika"
+
+    },
+    {
+        "name": "Cafe B",
+        "lokasi": "Jalan Kemayoran Raya",
+        "rating": 5,
+        "Favorit": "Kopi Espresso"
+
+    },
+    {
+        "name": "Cafe C",
+        "lokasi": "Jalan Sunter Hijau",
+        "rating": 4,
+        "Favorit": "Milkshake"
+
+    }
+]

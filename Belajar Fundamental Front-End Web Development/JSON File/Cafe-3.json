@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Cafe G",
+        "lokasi": "Jalan Pegangsaan Timur",
+        "rating": 4,
+        "Favorit": "Es Teh Manis"
+
+    },
+    {
+        "name": "Cafe H",
+        "lokasi": "Jalan Bekasi",
+        "rating": 5,
+        "Favorit": "Kopi Robusta"
+
+    },
+    {
+        "name": "Cafe I",
+        "lokasi": "Jalan Pulogadung",
+        "rating": 5,
+        "Favorit": "Kopi Cappucino"
+
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Cafe J",
+        "lokasi": "Jalan Salemba",
+        "rating": 4,
+        "Favorit": "Latte"
+
+    },
+    {
+        "name": "Cafe K",
+        "lokasi": "Jalan Matraman",
+        "rating": 5,
+        "Favorit": "Moccachino"
+
+    },
+    {
+        "name": "Cafe L",
+        "lokasi": "Jalan Jatinegara",
+        "rating": 5,
+        "Favorit": "Affogato"
+
+    }
+]

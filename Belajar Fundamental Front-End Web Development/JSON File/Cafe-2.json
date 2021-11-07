@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Cafe D",
+        "lokasi": "Jalan Menteng Raya",
+        "rating": 4,
+        "Favorit": "Kopi Hitam"
+
+    },
+    {
+        "name": "Cafe E",
+        "lokasi": "Jalan Cikini",
+        "rating": 5,
+        "Favorit": "Teh Hijau"
+
+    },
+    {
+        "name": "Cafe F",
+        "lokasi": "Jalan Gunung Sahari",
+        "rating": 5,
+        "Favorit": "Kopi Luwak"
+
+    }
+]
